@@ -1,3 +1,0 @@
-class Test () {
-  println("Hello") 
-}
