@@ -1,0 +1,47 @@
+//class Car 생성
+//model : String
+//    color : Enum
+//    speed : Int
+//    gas : Int
+//    fun getSpeeds(): Int
+//    fun IncreaseSpeed(): Unit
+//    fun addGas(newGas: Int): Unit
+//("my name is ${a.getSpeeds})
+
+enum class Color {
+    RED,
+    GREEN,
+    PURPLE
+}
+
+class Car(var model: String, var speed: Int, var gas: Int) {
+    fun getSpeeds(): Int {
+        return speed
+        println(speed)
+    }
+
+    fun IncreaseSpeed(): Unit {
+        val b = speed + 200
+        println("and it get increase spedd up to $b")
+    }
+
+    fun addGas(newGas:Int): Unit {
+        gas = gas + newGas
+        println("It adds new gas amount of $newGas" )
+        println("Total gas is $gas")
+
+    }
+}
+
+fun main() {
+    var a = Car("Porsche 911", 110, 40)
+    println("Car a's model is ${a.model}")
+    println("color is ${Color.RED}")
+    println("it get speeds to ${a.getSpeeds()}")
+    a.IncreaseSpeed()
+    a.addGas(3)
+}
+
+
+
+
